@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    
+}
+.barra_tarefas ul{
+    list-style: none;
+    height: 100%;
+    padding-top: 200px;
+    padding-left: 40px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.barra_tarefas ul li{
+    display: block;
+    padding-top: 17px;
+    border: 1px solid blue;
+    text-align: center;
+    background-color: blue;
+    border-bottom:1px solid white;
+    cursor: pointer;
+
+
+    
+}
+body{
+    background-color: #e5e5e5;
+    width: 1349px;
+    height: 570px;
+    text-align: center;
+
+    background: -webkit-linear-gradient(180deg, #B31A00 50%, #701909 90%);
+    background: -o-linear-gradient(top, #B31A00 50%, #701909 50%);
+    background: -moz-linear-gradient(180deg, #B31A00 50%, #701909 50%);
+    background: linear-gradient(top, #B31A00 50%, #701909 50%);
+    
+}
+.barra_tarefas{
+    width: 15%;
+    height: 25%;
+}
+.centro{
+    
+}
+#ul_tarefa{
+    display: none;
+    list-style: none;
+}

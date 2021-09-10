@@ -53,17 +53,19 @@
                 li.appendChild(img)
                 li.appendChild(document.createTextNode(palavras));
                 lista.appendChild(li);
+                
+                //document.querySelector('img').onclick = apagar(li);
 
+                img.setAttribute('onclick','apagar(li)');
                 nome ="" 
                 document.getElementById("txt_name").value = name
                 document.getElementById("txt_password").value = name;
-                document.querySelector('img').onclick = apagar(li);
             }
             
         }
         function apagar(li){
             var lista = document.getElementById("lista");
-            alert("OI");
+            lista.removeChild(li)
             
         }
     </script>

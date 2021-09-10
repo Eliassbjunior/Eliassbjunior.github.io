@@ -36,7 +36,6 @@
     </div>
 
     <script>
-        const idd = 0;
         function inserir(){
             var lista = document.getElementById("lista");
             var nome = document.getElementById("txt_name").value;
@@ -51,7 +50,7 @@
                 
                 img.srcset = "image/delete_10px.png";
                 img.setAttribute("onclick","apagar();");
-
+                document.querySelector(img).onclick = apagar(li);
                 li.appendChild(img)
                 li.appendChild(document.createTextNode(palavras));
                 lista.appendChild(li);
@@ -62,8 +61,10 @@
             }
             
         }
-        function apagar(){
-            alert("OI")
+        function apagar(li){
+            var lista = document.getElementById("lista");
+            lista.removeChild(li);
+            
         }
     </script>
 

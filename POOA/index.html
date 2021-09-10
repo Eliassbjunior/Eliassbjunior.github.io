@@ -49,7 +49,6 @@
                 var img = document.createElement('img');
                 
                 img.srcset = "image/delete_10px.png";
-                img.setAttribute("onclick","apagar();");
                 document.querySelector(img).onclick = apagar(li);
                 li.appendChild(img)
                 li.appendChild(document.createTextNode(palavras));

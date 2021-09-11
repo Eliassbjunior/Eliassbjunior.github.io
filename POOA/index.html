@@ -56,18 +56,20 @@
                 li.appendChild(document.createTextNode(palavras));
                 lista.appendChild(li);
                 
-                //document.querySelector('img').onclick = apagar(li);
+
+                document.querySelector('img').onclick = apagar(itens.indexOf(palavras));
                 
-                img.setAttribute('onclick','apagar'(li));
+                img.setAttribute('onclick','apagar()');
                 nome ="" 
                 document.getElementById("txt_name").value = name
                 document.getElementById("txt_password").value = name;
             }
             
         }
-        function apagar(li){
+        function apagar(i){
             var lista = document.getElementById("lista");
-            lista.removeChild(li)
+            lista.removeChild(itens[i]);
+            alert("Direto");
             
         }
     </script>

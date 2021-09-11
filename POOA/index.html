@@ -57,7 +57,7 @@
                 lista.appendChild(li);
                 
 
-                document.querySelector('img').onclick = apagar(itens.indexOf(palavras));
+                document.querySelector('img').onclick = apagar(li);
                 
                 //img.setAttribute('onclick','apagar()');
                 nome ="" 
@@ -66,10 +66,9 @@
             }
             
         }
-        function apagar(i){
+        function apagar(li){
             var lista = document.getElementById("lista");
-            lista.removeChild(itens[i]);
-            alert("Direto");
+            lista.removeChild(li);
             
         }
     </script>

@@ -36,41 +36,34 @@
     </div>
 
     <script>
-
+        var elem = document.getElementById("lista");
         function inserir(){
-            var lista = document.getElementById("lista");
+            var lista = document.getElementById("lista").innerHTML;
             var nome = document.getElementById("txt_name").value;
             var password = document.getElementById("txt_password").value;
-            
-            if(document.getElementById("txt_name").value == " " || document.getElementById("txt_password").value == " " ||document.getElementById("txt_name").value == "" || document.getElementById("txt_password").value == ""){
+            var palavras = " NOME: " + nome + " SENHA: "+ password;
+
+            if(!palavras.trim){
                 alert("Preencha dos campos é obrigatório!");
             }else{
-                var palavras = " NOME: " + nome + " SENHA: "+ password;
-                var li = document.createElement('li');
-                var img = document.createElement('img');
-                
-                img.srcset = "image/delete_10px.png";
-                li.appendChild(img)
-                li.appendChild(document.createTextNode(palavras));
-                lista.appendChild(li);
-                
+           
+                lista += "<li>"+ "<img scr = 'image/delete_10px.png' >" + palavras + "</li>";
+                document.getElementById("lista").innerHTML = lista;
 
-                document.querySelector('img').onclick = apagar(this.li);
-                
-                //img.setAttribute('onclick','apagar()');
                 nome ="" 
                 document.getElementById("txt_name").value = name
                 document.getElementById("txt_password").value = name;
             }
             
         }
-        function apagar(li){
-            var lista = document.getElementById("lista");
-            alert("Oi");
-            lista.removeChild(li);
-            
+        
+        elem.addEventListener('click', function(e){
+            if(e.target && e.target.nodeName == "IMG") {
+            e.target.childNode.remove();
         }
+        });
     </script>
 
 </body>
 </html>
+

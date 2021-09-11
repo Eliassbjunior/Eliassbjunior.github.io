@@ -36,6 +36,8 @@
     </div>
 
     <script>
+        var itens;
+
         function inserir(){
             var lista = document.getElementById("lista");
             var nome = document.getElementById("txt_name").value;
@@ -49,14 +51,14 @@
                 var img = document.createElement('img');
                 
                 img.srcset = "image/delete_10px.png";
-                
+                itens.push(palavras);
                 li.appendChild(img)
                 li.appendChild(document.createTextNode(palavras));
                 lista.appendChild(li);
                 
                 //document.querySelector('img').onclick = apagar(li);
                 
-                img.setAttribute('onclick','apagar(li)');
+                img.setAttribute('onclick','apagar'(li));
                 nome ="" 
                 document.getElementById("txt_name").value = name
                 document.getElementById("txt_password").value = name;

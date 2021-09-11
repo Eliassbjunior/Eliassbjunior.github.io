@@ -36,7 +36,7 @@
     </div>
 
     <script>
-        var elem = document.getElementById("lista");
+        
         function inserir(){
             var lista = document.getElementById("lista").innerHTML;
             var nome = document.getElementById("txt_name").value;
@@ -47,21 +47,22 @@
                 alert("Preencha dos campos é obrigatório!");
             }else{
            
-                lista += "<li>"+"<img scr='image/delete_10px.png'>" + palavras + "</li>";
+                lista += "<li>"+"<input type='image' scr='image/delete_10px.png'>" + palavras + "</li>";
                 document.getElementById("lista").innerHTML = lista;
 
                 nome ="" 
                 document.getElementById("txt_name").value = name
                 document.getElementById("txt_password").value = name;
             }
-            
+            var elem = document.getElementById("lista");
+            elem.addEventListener('click', function(e){
+                if(e.target && e.target.nodeName == "INPUT") {
+                    e.target.childNode.remove();
+                }
+            });
         }
         
-        elem.addEventListener('click', function(e){
-            if(e.target && e.target.nodeName == "IMG") {
-            e.target.childNode.remove();
-        }
-        });
+        
     </script>
 
 </body>

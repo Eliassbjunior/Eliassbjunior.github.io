@@ -59,7 +59,7 @@
         var elem = document.getElementById("lista");
             elem.addEventListener('click', function(e){
                 if(e.target && e.target.nodeName == "BUTTON") {
-                    e.target.childNode.remove();
+                    e.target.parentNode.remove();
                 }
         });
     </script>

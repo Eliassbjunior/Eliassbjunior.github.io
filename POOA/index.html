@@ -26,7 +26,7 @@
             <label for="txt_password">Senha: </label>
             <input type="password" id="txt_password" name="txt_password"><br><br>
             <input onclick="inserir()" id="button" type="button" value="Registrar">
-            
+            <button> </button>
         </form>
     </div>
 
@@ -47,7 +47,7 @@
                 alert("Preencha dos campos é obrigatório!");
             }else{
            
-                lista += "<li>" + "<input type='button' value='X' id='btt'>" + palavras + "</li>";
+                lista += "<li>" + "<button id='btt'>X</button> " + palavras + "</li>";
                 document.getElementById("lista").innerHTML = lista;
 
                 nome ="" 
@@ -58,10 +58,11 @@
             var elem = document.getElementById("lista");
             elem.addEventListener('click', function(e){
                 if(e.target && e.target.nodeName == "BUTTON") {
-                    e.target.parentNode.remove();
+                    e.target.ChildNode.remove();
                 }
-        });
-        }
+            });
+        } 
+        
         
         
     </script>

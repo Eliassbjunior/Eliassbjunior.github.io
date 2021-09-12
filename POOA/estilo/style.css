@@ -101,6 +101,7 @@ body{
 #btt{
     color:white;
     background-color: red;
+    cursor: pointer;
 }
 
 #button{

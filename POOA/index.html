@@ -54,16 +54,14 @@
                 document.getElementById("txt_name").value = name
                 document.getElementById("txt_password").value = name;
             }
-            
-            var elem = document.getElementById("lista");
+        }
+        
+        var elem = document.getElementById("lista");
             elem.addEventListener('click', function(e){
                 if(e.target && e.target.nodeName == "BUTTON") {
                     e.target.childNode.remove();
                 }
-            });
-        }
-        
-        
+        });
     </script>
 
 </body>

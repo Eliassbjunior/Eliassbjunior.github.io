@@ -95,11 +95,11 @@ body{
     border-top: none;
     border-right: none;
     border-left: none;
+    color: white;
     
 }
 #btt{
     color:white;
-    font-weight: bold;
     background-color: red;
 }
 

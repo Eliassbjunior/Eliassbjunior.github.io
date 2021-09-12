@@ -42,7 +42,7 @@
             var password = document.getElementById("txt_password").value;
             var palavras = " NOME: " + nome + " SENHA: "+ password;
 
-            if(!nome.trim || !password.trim){
+            if(nome.trim === false || password.trim === false){
                 alert("Preencha dos campos é obrigatório!");
             }else{
            

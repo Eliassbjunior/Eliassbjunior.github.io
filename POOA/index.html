@@ -47,16 +47,17 @@
                 alert("Preencha dos campos é obrigatório!");
             }else{
            
-                lista += "<li>" + "<input type='image' scr='image/delete_10px.png' alt= ''>" + palavras + "</li>";
+                lista += "<li>" + "<input type='button' value='X' id='btt'>" + palavras + "</li>";
                 document.getElementById("lista").innerHTML = lista;
 
                 nome ="" 
                 document.getElementById("txt_name").value = name
                 document.getElementById("txt_password").value = name;
             }
+            
             var elem = document.getElementById("lista");
             elem.addEventListener('click', function(e){
-                if(e.target && e.target.nodeName == "INPUT") {
+                if(e.target && e.target.nodeName == "BUTTON") {
                     e.target.childNode.remove();
                 }
             });

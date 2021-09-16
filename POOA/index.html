@@ -13,7 +13,7 @@
     <div class="barra_tarefas">
         <h1>Tarefas</h1>
         <ul>
-            <li>Tarefa 1</li>
+            <li><a href="#centro">Tarefa 1</a></li>
             <li>Tarefa 2</li>
         </ul>
     </div>
@@ -30,12 +30,14 @@
     </div>
 
     <div id="resposta">
-        <ul id="lista">
-        </ul>
+        <ul id="lista"></ul>
+
     </div>
 
     <script>
-        
+        var nomes = [];
+
+
         function inserir(){
             var lista = document.getElementById("lista").innerHTML;
             var nome = document.getElementById("txt_name").value;
@@ -45,25 +47,30 @@
             if(nome === '' || nome === ' '|| password === '' || password === ' '){
                 alert("Preencha dos campos é obrigatório!");
             }else{
-           
-                lista += "<li>" + "<button id='btt'>X</button> " + palavras + "</li>";
-                document.getElementById("lista").innerHTML = lista;
-
-                nome ="" 
-                document.getElementById("txt_name").value = name
-                document.getElementById("txt_password").value = name;
+                    if(nomes.length >= 7){
+                        alert("Lista Cheia!");
+                    }else{
+                        lista += "<li>" + "<button id='btt'>X</button> " + palavras + "</li>";
+                        document.getElementById("lista").innerHTML = lista;
+                        document.getElementById("txt_name").value = name
+                        document.getElementById("txt_password").value = name;
+                        nomes.push(nome);
+                    }
+                
             }
+            
         } 
+       
+
         var elem = document.getElementById("lista");
-        
         elem.addEventListener('click', function(e){
             if(e.target && e.target.nodeName == "BUTTON") {
                 e.target.parentNode.remove();
+                
             }
         });
 
-        
-        
+       
     </script>
 
 </body>

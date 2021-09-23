@@ -15,9 +15,21 @@
     	}
 
 		#aula2::before{
-    		content: "📂 ";
+    		content: "🗄️ ";
     	}
-		
+		#aula2::before ul{
+			content: "📂 ";
+		}
+		#aula3::before{
+    		content: "🗄️ ";
+			
+    	}
+		a::before{
+			content: "📂 " ;
+		}
+		ul{
+			list-style: none;
+		}
 	</style>
 </head>
 <body>
@@ -29,8 +41,12 @@
 			<li><a href="Aula2/Tarefa1/home.html">Tarefa 1</a></li>
 			<li><a href="Aula2/Tarefa2/mapadobrasil.html">Tarefa 2</a></li>
 		</ul>
-		<li><a href="POOA/index.html">POOA</a></li>
+		<li id="aula3">Aula3</li>
+		<ul>
+			<li><a href="Aula3/Tarefa1/index.html">Tarefa 1</a></li>
+			<li><a href="Aula3/Tarefa2/index.html">Tarefa 2</a></li>
+		</ul>	
     </ul>
-</body>
 
+</body>
 </html>

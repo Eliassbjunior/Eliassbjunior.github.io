@@ -5,8 +5,10 @@
 }
 .lista2 li{
     display: inline;
-    text-decoration: none
+    text-decoration: none;
+    border: 1px solid black;
 }
+
 body{
     height: 700px;
 }
@@ -100,6 +102,13 @@ body{
 
 .content{
     grid-area: content;
+}
+.content article{
+    border: 1px solid black;
+    margin: 7px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .advert{
     grid-area: advert;

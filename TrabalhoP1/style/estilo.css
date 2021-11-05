@@ -118,7 +118,7 @@ body{
 }
 .anuncio1 label{
     float: right;
-    padding-top: 45px;
+    padding-top: 35px;
     padding-right: 20px;
 }
 
@@ -134,7 +134,4 @@ body{
 .link-footers ul li{
     display: inline;
     float: left;
-}
-.link-footers label{
-    text-align: end;
 }

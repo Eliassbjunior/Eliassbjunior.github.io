@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho P2</title>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">Avaliação P2</h1>
+    </div>
+    
+    <div>
+        <form action="#">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <input  type="text" id="txt_nome" placeholder="Nome:"><br><br>
+                <input  type="text" id="telefone" placeholder="Telefone:" name="telefone">
+            </fieldset>
+
+            <br><br>
+
+            <fieldset>
+                <legend>Retirada e Entrega do veículo</legend>
+                
+                <label>Cidade de Retirada:</label> 
+                <select id="cidade_retirada" name="cidades">
+                    <option value="Campos dos Goytacazes">Campos dos Goytacazes - RJ</option>
+                    <option value="Vitória">Vitória - ES</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro - RJ</option>
+                </select><br><br>
+                
+                <label>Cidade de Entrega:</label> 
+                <select id="cidade_entrega" name="cidades">
+                    <option value="Campos dos Goytacazes">Campos dos Goytacazes - RJ</option>
+                    <option value="Vitória">Vitória - ES</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro - RJ</option>
+                </select>  
+
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend>Data de Retirada e Devolução</legend>
+                <label>Data de Retirada</label>
+                <input id="data_retirada" type="date" name="Data de Entrega">
+                <br><br>
+                <label>Data de Entrega </label>
+                <input id="data_entrega" type="date" name="Data de Retirada">
+            </fieldset>
+
+            <br><br>
+
+            <fieldset>
+                <legend>Tipos de Carro:</legend>
+                <select id="tipo_carro" name="cidades">
+                    <option value="tipo1">Básico - R$119,00</option>
+                    <option value="tipo2">Básico com ar - R$199,00</option>
+                    <option value="tipo3">Executivo - R$299,00</option>
+                </select>
+            </fieldset>
+
+            <input type="button" onclick="calcular()" value="Enviar">
+        </form>
+    </div>
+    
+</body>
+
+<script type="text/javascript">
+
+    function calcular(){
+        
+        var input_nome = document.querySelector("#txt_nome");
+        var input_telefone = document.querySelector("#telefone");
+
+        var select_entrega = document.getElementById("cidade_entrega");
+        var c_entrega = select_entrega.options[select_entrega.selectedIndex].value;
+
+        var select_retirada = document.getElementById("cidade_retirada");
+        var c_retirada = select_retirada.options[select_retirada.selectedIndex].value;
+
+        var select = document.getElementById("tipo_carro");
+        var tipo_carro = select.options[select.selectedIndex].value;
+
+        var date_retirada = new Date(document.getElementById("data_retirada").value);
+        var date_entrega = new Date(document.getElementById("data_entrega").value);
+
+        var Milissegundos = date_entrega.getTime() - date_retirada.getTime();
+        var dias = Milissegundos/(1000*60*60*24);
+        
+        var valor_final;
+
+        if(c_retirada == c_entrega){
+            if(tipo_carro == "tipo1"){
+                if(dias == 0){
+                    valor_final = 119*1;
+                }else{
+                    valor_final = 119*dias;
+                }
+                
+            }else{
+                if(tipo_carro == "tipo2"){
+                    if(dias == 0){
+                        valor_final = 199*1;
+                    }else{
+                        valor_final = 199*dias;
+                    }
+                    
+                }else{
+                    if(dias == 0){
+                        valor_final = 299 * 1;
+                    }else{
+                        valor_final = 299*dias;
+                    }
+                    
+                }
+            }
+        }else{
+            if(tipo_carro == "tipo1"){
+                if(dias == 0){
+                    valor_final = 300 + (119*1);
+                }else{
+                    valor_final = 300 + (119*dias);
+                }
+                
+            }else{
+                if(tipo_carro == "tipo2"){
+                    if(dias == 0){
+                        valor_final = 300 + (199*1);
+                    }else{
+                        valor_final = 300 + (199*dias);
+                    }
+                    
+                }else{
+                    if(dias == 0){
+                        valor_final = 300 + (299 * 1);
+                    }else{
+                        valor_final = 300 + (299*dias);
+                    }
+                    
+                }
+            }
+        }
+
+        alert("Nome: " + input_nome.value + " Telefone: " + input_telefone.value + " Cidade de Retirada: " + c_retirada + " Cidade de Entrega: " + c_entrega + " Valor a Pagar: " + valor_final);
+        
+    }
+</script>
+</html>

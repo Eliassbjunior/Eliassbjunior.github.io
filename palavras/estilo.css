@@ -1,0 +1,72 @@
+@import url(https://allfont.net/allfont.css?fonts=lobster);
+
+body{
+    margin: 0;
+    
+}
+.grid-template{
+    display: grid;
+    background-color: #F4F3F1;
+    grid-template-columns: auto ;
+    grid-template-rows: minmax(50px,75px) minmax(200px,550px);
+    
+    grid-template-areas: 
+    "nav"
+    "principal";
+}
+.nav{
+    display: flex;
+    grid-area: nav;
+    justify-content: center;
+    
+}
+label{
+    display: flex;
+    font-family: 'Lobster', arial;
+    font-size: 50px;
+
+}
+
+
+.principal{
+    display: grid;
+    grid-area: principal;
+    place-items: center;
+}
+.letras{
+    border: 2px black solid;
+    margin-right: 10px;
+    width: 50px;
+    margin-bottom: 2px;
+    border-radius: 3px;
+    
+}
+.letras input{
+    border: 0 none;
+    box-shadow: 0 0 0 0;
+    font-size: 14px;
+    text-align: center;
+    background-color: #f3f1f1;
+  
+}
+.letras input:focus{
+    background-color: #f3f1f1;
+    box-shadow: 0 0 0 0;
+}
+.group{
+    display: flex;
+       
+}
+.resultados{
+    display: table;
+    border-radius: 5px;
+    border: 2px black solid;
+    padding: 15px;
+    background-color: #f3f1f1;
+}
+.linhas{
+    display: flex;
+}
+.linhas input{
+    cursor: pointer;
+}

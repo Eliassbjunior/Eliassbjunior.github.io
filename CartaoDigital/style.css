@@ -12,5 +12,5 @@
     box-shadow: none !important;
 }
 #contato::before{
-    content: "";
+    content: url(assents/download_12px.png);
 }

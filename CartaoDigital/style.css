@@ -1,0 +1,16 @@
+*{
+    background-color: #F5F6F8;
+}
+.btn-xs{
+    border: 1px #dee2e6 solid !important;
+    padding: .2rem .6rem !important;
+    font-size: .75rem !important;
+    border-radius: .15rem !important;
+    
+}
+.btn-xs:focus{
+    box-shadow: none !important;
+}
+#contato::before{
+    content: "";
+}

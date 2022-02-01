@@ -46,3 +46,7 @@
 .text-muted > em{
     font-size: 14px !important;
 }
+.text-center > h5{
+    font-size: 15px !important;
+    color: #5A1D3D !important;
+}

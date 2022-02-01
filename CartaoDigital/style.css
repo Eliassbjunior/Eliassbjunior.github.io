@@ -16,9 +16,7 @@
 .btn-xs:hover{
     border: 1px white solid !important;
 }
-#contato::before{
-    content: url();
-}
+
 .btn-outline-light {
     color: #f3f7f9;
     border-color: #f3f7f9;
@@ -95,7 +93,10 @@
     color: #fff !important;
 }
 a{
-    color: #6658dd;
-    text-decoration: none;
-    background-color: transparent;
+    text-decoration: none !important;
+    background-color: transparent !important;
+}
+.fa-whatsapp{
+    color: white !important;
+    background: transparent;
 }

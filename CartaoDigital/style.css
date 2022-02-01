@@ -17,7 +17,7 @@
     border: 1px white solid !important;
 }
 #contato::before{
-    content: url();
+    content: "\e957";
 }
 .btn-outline-light {
     color: #f3f7f9;
@@ -55,7 +55,7 @@
     color: #5A1D3D !important;
 }
 .mdi-whatsapp::before {
-    content: "\f232";
+    content: "\F05A3" !important;
 }
 .mdi-set, .mdi:before {
     display: inline-block;
@@ -67,4 +67,8 @@
 }
 .bg-success {
     background-color: #1abc9c!important;
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
 }

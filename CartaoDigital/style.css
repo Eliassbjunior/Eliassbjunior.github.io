@@ -14,3 +14,20 @@
 #contato::before{
     content: url(assents/download_12px.png);
 }
+.btn-outline-light {
+    color: #f3f7f9;
+    border-color: #f3f7f9;
+}
+.waves-effect {
+    border-radius: .15rem !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}

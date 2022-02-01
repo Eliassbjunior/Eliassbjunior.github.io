@@ -11,9 +11,13 @@
 }
 .btn-xs:focus{
     box-shadow: none !important;
+    
+}
+.btn-xs:hover{
+    border: 1px white solid !important;
 }
 #contato::before{
-    content: "\f232";
+    content: url();
 }
 .btn-outline-light {
     color: #f3f7f9;
@@ -60,4 +64,7 @@
     text-rendering: auto;
     line-height: inherit;
     -webkit-font-smoothing: antialiased;
+}
+.bg-success {
+    background-color: #1abc9c!important;
 }

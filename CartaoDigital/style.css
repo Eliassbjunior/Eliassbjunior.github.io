@@ -17,7 +17,7 @@
     border: 1px white solid !important;
 }
 #contato::before{
-    content: "\e957";
+    content: url();
 }
 .btn-outline-light {
     color: #f3f7f9;
@@ -71,7 +71,7 @@
 }
 
 .bg-succes {
-    --bs-bg-opacity: 1;
+    --bs-bg-opacity: 50;
     background-color: #5A1D3D;
 }
 .avatar-title {
@@ -90,4 +90,12 @@
 }
 *, ::after, ::before {
     box-sizing: border-box;
+}
+.text-white{
+    color: #fff !important;
+}
+a{
+    color: #6658dd;
+    text-decoration: none;
+    background-color: transparent;
 }

@@ -12,7 +12,7 @@
     box-shadow: none !important;
 }
 #contato::before{
-    content: url(assents/download_12px.png);
+    content: url();
 }
 .btn-outline-light {
     color: #f3f7f9;

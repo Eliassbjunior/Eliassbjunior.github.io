@@ -84,15 +84,8 @@ a{
     text-decoration: none !important;
     background-color: transparent !important;
 }
-.fa-whatsapp{
-    color: white !important;
-    background: transparent;
-}
-.fa-phone{
-    color: white !important;
-    background: transparent;
-}
-#mapa{
+
+#icones{
     color: white !important;
     background: transparent;
 }

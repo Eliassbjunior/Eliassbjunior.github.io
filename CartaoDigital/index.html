@@ -42,7 +42,7 @@
                                     <div class="modal-footer">
                                         <label>Copie o link abaixo e cole-o em qualquer lugar que você queira compartilhá-lo.</label>
                                         <div class="input-group mt-3 mb-3">
-                                            <input type="text" class="form-control" value="https://eliassbjunior.github.io/CartaoDigial/index.html" id="myInput" disabled>
+                                            <input type="text" class="form-control" value="https://eliassbjunior.github.io/CartaoDigial/index.html" id="myInput">
                                             <div class="input-group-append">
                                                 <button onclick="myFunction()" class="btn btn-dark waves-effect waves-light" type="button">Copiar</button>
                                             </div>
@@ -156,13 +156,12 @@
         
         <script type="text/javascript">
             function myFunction() {
-            var copyText = document.getElementById("myInput");
+                var copyText = document.getElementById("myInput");
 
-            copyText.select();
-            copyText.setSelectionRange(0, 99999); 
 
-            
-            document.execCommand("copy");
+                copyText.select();
+                document.execCommand("copy");
+                
             }
         </script>
     </body>

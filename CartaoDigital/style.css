@@ -100,3 +100,8 @@ a{
     margin-right: -12px;
     margin-left: -12px;
 }
+.input-group > input:focus {
+    outline: none !important;
+    box-shadow: 0 0 5px black;
+    border-color: white;
+}
